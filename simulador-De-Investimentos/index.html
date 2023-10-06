@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Front-End</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <p>Calculadora de investimentos</p>
+  </header>
+  <main>
+    <div class="simula-invest">
+
+      <div class="h1-simula">
+        <h1>Simulador de investimentos</h1>
+      </div>
+
+      <div class="simulador-resultado">
+
+        <div class="simulador">
+          <h2>Simulador</h2>
+          <form method="POST" action="/" class="formulario">
+            <div class="simula-left">
+              <p>Rendimento</p>
+              <div class="bruto-liquido">
+                <div class="bruto botao-check btn-ch-l" id="btn-b-l">
+                  <div id="only-input"></div>
+                  Bruto
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="liquido botao-check btn-ch-l" id="btn-l-l">
+                  <div id="only-input"></div>
+                  Liquido
+                </div>
+              </div>
+              <label>Aporte inicial</label>
+              <input type="text" name="aporte-inicial" data-rules="required|number" class="perguntas">
+              <label>Prazo (em meses)</label>
+              <input type="text" name="prazo" data-rules="required|number" class="perguntas">
+              <label>IPCA (ao ano)</label>
+              <input type="text" name="ipca" value="10.06%" data-rules="required|number" disabled class="perguntas vem-da-api">
+            </div>
+            <div class="simula-right">
+              <p>Tipos de indexação</p>
+
+              <div class="pre-pos-fix">
+
+                <div class="pre botao-check btn-ch-r">
+                  PRÉ
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="pos botao-check btn-ch-r">
+                  PÓS
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="fix botao-check btn-ch-r">
+                  FIXADO
+                </div>
+
+              </div>
+              <label>Aporte Mensal</label>
+              <input type="text" name="aporte-mensal" data-rules="required|number" class="perguntas">
+              <label>Rentabilidade</label>
+              <input type="text" name="rentabilidade" data-rules="required|number" class="perguntas">
+              <label>CDI (ao ano)</label>
+              <input type="text" name="cdi" value="9.18%" data-rules="required|number" disabled class="perguntas vem-da-api">
+            </div>
+          </form>
+          <div class="limpa-simula">
+            <button>Limpar campos</button>
+            <button type="submit" class="simular">Simular</button>
+          </div>
+        </div>
+
+        <div class="resultado">
+          <h2>Resultado da Simulação</h2>
+
+          <div class="linha-resultado">
+
+            <div class="resultado-simula">
+              <p class="titulo">Valor final Bruto</p>
+              <p class="valor">R$ 15.509,27</p>
+            </div>
+            <div class="resultado-simula">
+              <p class="titulo">Valor final Bruto</p>
+              <p class="valor">R$ 15.509,27</p>
+            </div>
+            <div class="resultado-simula">
+              <p class="titulo">Valor final Bruto</p>
+              <p class="valor">R$ 15.509,27</p>
+            </div>
+          </div>
+
+          <div class="linha-resultado">
+
+            <div class="resultado-simula">
+              <p class="titulo">Valor final Bruto</p>
+              <p class="valor-verde">R$ 15.509,27</p>
+            </div>
+            <div class="resultado-simula">
+              <p class="titulo">Valor final Bruto</p>
+              <p class="valor">R$ 15.509,27</p>
+            </div>
+            <div class="resultado-simula">
+              <p class="titulo">Valor final Bruto</p>
+              <p class="valor-verde">R$ 15.509,27</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/valida.js"></script>
+</body>
+
+</html>
